@@ -4,7 +4,7 @@ Implementation for the IJCAI2021 work "Beyond the Spectrum: Detecting Deepfakes 
 Code coming soon!
 
 ## Citation
-If our work is useful for you, please cite our work:
+If our work is useful for you, please cite our paper:
 
     @inproceedings{yang_ijcai21,
       title={Beyond the Spectrum: Detecting Deepfakes via Re-synthesis},
