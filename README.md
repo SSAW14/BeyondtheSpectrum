@@ -37,7 +37,6 @@ The following scripts show how to train a model with those tasks.
 ```bash
 bash script/train_pixel_pggan_colorization.sh [GPU_ID]
 ```
-    or
 ```bash
 bash script/train_stage5_stylegan_denoising.sh [GPU_ID]
 ```
@@ -48,7 +47,6 @@ Please download our models. You can use pixel-level or stage5-level to perform d
 ```bash
 bash script/test_pixel_celeba.sh [GPU_ID]
 ```
-    or
 ```bash
 bash script/test_stage5_celeba.sh [GPU_ID]
 ```
