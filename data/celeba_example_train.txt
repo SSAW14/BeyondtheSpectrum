@@ -1,4 +1,0 @@
-./data/CelebA/CelebA-HQ_00000001.png
-./data/CelebA/CelebA-HQ_00000002.png
-./data/CelebA/CelebA-HQ_00000003.png
-./data/CelebA/CelebA-HQ_00000004.png
