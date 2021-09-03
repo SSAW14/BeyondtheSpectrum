@@ -1,1 +1,118 @@
-test
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beyond the Spectrum: Detecting Deepfakes via Re-synthesis (IJCAI 2021)</title>
+    <script type="text/javascript" src="resource/latexit.js"></script>
+    <script type="text/javascript">
+    LatexIT.add('p',true);
+    </script>
+
+    <!-- CSS includes -->
+    <link href="resource/bootstrap.css" rel="stylesheet">
+    <link href="resource/css.css" rel="stylesheet" type="text/css">
+    <link href="resource/mystyle.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="header" class="container-fluid">
+      <div class="row">
+        <h1>Beyond the Spectrum: Detecting Deepfakes by Image Re-Synthesis</h1>
+        <div class="authors">   
+          <a href="https://www.linkedin.com/in/yang-he-9334a3141/", target="_blank">Yang He</a><sup>1</sup>, 
+          <a href="https://ningyu1991.github.io/", target="_blank">Ning Yu</a><sup>2,3</sup>, 
+		  <a href="https://www.uni-mannheim.de/dws/people/professors/prof-dr-ing-margret-keuper/", target="_blank">Margret Keuper</a><sup>4</sup>, 
+          <a href="https://cispa.saarland/group/fritz/", target="_blank">Mario Fritz</a><sup>1</sup>
+        </div>
+      </div>
+    
+      <p style="text-align:center;">
+        <sup>1</sup>CISPA Helmholtz Center for Information Security
+         
+        <sup>2</sup>Max Planck Institute for Informatics </br>
+
+        <sup>3</sup>University of Maryland, College Park
+		 
+		<sup>4</sup>University of Mannheim
+      </p>
+    </div>
+
+    <div class="container" id="intro_video">
+    <h2>Introduction Video</h2>
+    <p style="text-align:center;">
+      <iframe width="966" height="543" src="https://www.youtube.com/embed/kQeREkzrrPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
+    </div>
+    
+    <div class="container" id="abstractdiv">
+      <h2>Abstract</h2>
+      The rapid advances in deep generative models over the past years have led to highly realistic media, known as deepfakes, that are commonly indistinguishable from real to human eyes. These advances make assessing the authenticity of visual data increasingly difficult and pose a misinformation threat to the trustworthiness of visual content in general. Although recent work has shown strong detection accuracy of such deepfakes, the success largely relies on identifying frequency artifacts in the generated images, which will not yield a sustainable detection approach as generative models continue evolving and closing the gap to real images. In order to overcome this issue, we propose a novel fake detection that is designed to re-synthesize testing images and extract visual cues for detection. The re-synthesis procedure is flexible, allowing us to incorporate a series of visual tasks - we adopt super-resolution, denoising and colorization as the re-synthesis. We demonstrate the improved effectiveness, cross-GAN generalization, and robustness against perturbations of our approach in a variety of detection scenarios involving multiple generators over CelebA-HQ, FFHQ, and LSUN datasets. 
+	  
+    <div class="container" id="paperdiv">
+    <div class="row">
+      <div class="col-sm-6">
+        <a href="https://github.com/SSAW14/BeyondtheSpectrum" target="_blank"><p style="text-align: center;">
+        <img src="resource/icon/github_icon.png">
+        <br/>
+        Code (Github)
+      </p></a></div>
+      <div class="col-sm-6">
+        <a href="https://arxiv.org/abs/2105.14376" target="_blank"><p style="text-align: center;">
+        <img src="resource/icon/pdf_icon.png" height="120">
+        <br/>
+        IJCAI21 Paper (arXiv)
+      </p></a>
+    </div></div>
+
+    <div class="container" id="method">
+      <h2>Method</h2>
+      <p style="text-align:center;">
+        <img src="resource/method.gif" width="80%">
+      </p>
+      <br>
+      <p>
+	  The diagram of our detection pipeline. Our end-to-end model has two components. A classifier is trained with real/fake images. We learn a re-synthesizer with real images only to help extracting robust features and isolating fake images. The synthesizer takes different forms of inputs to capture various visual patterns from those tasks for robust representations, including super-resolution (SR), colorization (C) and denoising (D).
+      </p>
+    </div>
+
+    <div class="container" id="citation">
+      <h2>Citation</h2>
+      <div>
+        <pre class="citation">
+@inproceedings{yang_ijcai21,
+  title={Beyond the Spectrum: Detecting Deepfakes via Re-synthesis},
+  author={Yang He and Ning Yu and Margret Keuper and Mario Fritz},
+  booktitle={30th International Joint Conference on Artificial Intelligence (IJCAI)},
+  year={2021}
+}</pre>
+      </div>
+    </div>
+
+     <br>
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="resource/cispa.gif" width="75%">
+      </div>
+      <div class="col-sm-3">
+        <img src="resource/mpi.gif" width="100%">
+    </div>
+	<div class="col-sm-3">
+        <img src="resource/umd.gif" width="75%">
+    </div>
+	<div class="col-sm-3">
+        <img src="resource/manheim.gif" width="75%">
+    </div>
+	</div>
+	
+	
+	
+    <div id=footer><br></div>
+    <!-- Javascript includes -->
+    <script src="resource/jquery-1.js"></script>
+    <script src="resource/bootstrap.js"></script>
+  
+
+</body></html>
