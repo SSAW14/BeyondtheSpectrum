@@ -51,6 +51,10 @@ bash script/test_pixel_celeba.sh [GPU_ID]
 bash script/test_stage5_celeba.sh [GPU_ID]
 ```
 
+## Data
+The training and testing data for real images and synthetic images can be downloaded at 
+https://drive.google.com/drive/folders/1H0vykpx0m5od8757XxYFVjZFH0kfqVb8?usp=sharing
+
 ## Citation
 If our work is useful for you, please cite our paper:
 
@@ -63,4 +67,4 @@ If our work is useful for you, please cite our paper:
 
 Contact: Yang He (heyang614.cs@gmail.com)
 
-Last update: 08-22-2021
+Last update: 12-19-2021
