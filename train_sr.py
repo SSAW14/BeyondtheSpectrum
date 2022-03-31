@@ -114,35 +114,3 @@ if __name__ == '__main__':
 
         if (epoch + 1) % args.num_save == 0:
             torch.save(model.state_dict(), os.path.join(args.outputs_dir, 'epoch_{}.pth'.format(epoch)))
-        '''
-        model.eval()
-        epoch_psnr = AverageMeter()
-
-        for data in eval_dataloader:
-            inputs, labels = data
-
-            inputs = inputs.to(device)
-            labels = labels.to(device)
-
-            with torch.no_grad():
-                preds = model(inputs)
-
-            preds = convert_rgb_to_y(denormalize(preds.squeeze(0)), dim_order='chw')
-            labels = convert_rgb_to_y(denormalize(labels.squeeze(0)), dim_order='chw')
-
-            preds = preds[args.scale:-args.scale, args.scale:-args.scale]
-            labels = labels[args.scale:-args.scale, args.scale:-args.scale]
-
-            epoch_psnr.update(calc_psnr(preds, labels), len(inputs))
-
-        print('eval psnr: {:.2f}'.format(epoch_psnr.avg))
-
-        if epoch_psnr.avg > best_psnr:
-            best_epoch = epoch
-            best_psnr = epoch_psnr.avg
-            best_weights = copy.deepcopy(model.state_dict())
-        '''
-
-    #print('best epoch: {}, psnr: {:.2f}'.format(best_epoch, best_psnr))
-    #torch.save(best_weights, os.path.join(args.outputs_dir, 'best.pth'))
-
